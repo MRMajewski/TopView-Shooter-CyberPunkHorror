@@ -14,29 +14,34 @@ public class Player : MonoBehaviour
     Joystick joystick;
 
 
-    [SerializeField]
-    float MaxPositionX = 5f;
+    // [SerializeField]
+    //  float MaxPositionX = 5f;
 
-    [SerializeField]
-    float MaxPositionY = 5f;
+    //  [SerializeField]
+    //  float MaxPositionY = 5f;
 
     Rigidbody2D rigidbody;
 
-   
     CrosshariJoystick crosshair;
 
-  
+    private void Start()
+    {
+
+    }
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         crosshair = FindObjectOfType<CrosshariJoystick>();
+       
     }
     // Update is called once per frame
     void Update()
     {
-        Vector3 WalkingDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
+      //  Vector3 WalkingDirection = Vector3.zero;
 
+      Vector3  WalkingDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
+       
         UpdateMovement(WalkingDirection);
         UpdateRotation(WalkingDirection);
     }
@@ -56,24 +61,26 @@ public class Player : MonoBehaviour
     void UpdateMovement(Vector3 WalkingDirection)
     {
 
-        WalkingDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
+
+        //  WalkingDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
 
         if (WalkingDirection != Vector3.zero)
         {
 
-            transform.Translate(WalkingDirection * Time.deltaTime * 4f, Space.World);
+            //    transform.Translate(WalkingDirection * Time.deltaTime * 4f, Space.World);
 
-            var positionX = Mathf.Clamp(transform.position.x, -MaxPositionX, MaxPositionX);
-            var positionY = Mathf.Clamp(transform.position.y, -MaxPositionY, MaxPositionY);
+            // var positionX = Mathf.Clamp(transform.position.x, -MaxPositionX, MaxPositionX);
+            //  var positionY = Mathf.Clamp(transform.position.y, -MaxPositionY, MaxPositionY);
             //funkcja Clamp zwraca daną wartość z  określonego przedziału
             //jeżeli ta wartość x zawiera się w przedziale to jest zwracana, w innym przypadku zwracana jest skrajna wartość
 
-            transform.position = new Vector3(positionX, positionY);
+            //  transform.position = new Vector3(positionX, positionY);
+            WalkingDirection *= WalkingSpeed;
+            rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, WalkingDirection, Time.deltaTime * 1f);
+          
+            //     var targetRotation = rigidbody.velocity;
 
-           //     var targetRotation = rigidbody.velocity;
-
-         //   transform.right = Vector3.Lerp(transform.right, WalkingDirection, Time.deltaTime * 5f);
-
+            //   transform.right = Vector3.Lerp(transform.right, WalkingDirection, Time.deltaTime * 5f);
         }
     }
     void UpdateRotation(Vector3 WalkingDirection)

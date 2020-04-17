@@ -18,7 +18,7 @@ public class Crosshair : MonoBehaviour
     // Update is called once per frame
         void Update()
         {
-            var targetPosition = (Vector2)Camera.ScreenToWorldPoint(Input.mousePosition);
+        var targetPosition = (Vector2)Camera.ScreenToWorldPoint(Input.mousePosition);
 
             targetPosition.x = Mathf.Clamp(targetPosition.x, -MovementArea.x, MovementArea.x);
             targetPosition.y = Mathf.Clamp(targetPosition.y, -MovementArea.y, MovementArea.y);

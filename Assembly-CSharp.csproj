@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\CrosshariJoystick.cs" />
     <Compile Include="Assets\Scripts\DelayedDestroy.cs" />
     <Compile Include="Assets\Scripts\GUI.cs" />
+    <Compile Include="Assets\Scripts\MainCamera.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerOneJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
