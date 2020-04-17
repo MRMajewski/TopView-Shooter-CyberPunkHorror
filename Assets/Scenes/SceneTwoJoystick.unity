@@ -5310,7 +5310,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &513602923
 MonoBehaviour:
@@ -11281,7 +11281,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1377876801}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14410,12 +14411,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377876799}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.91, y: -0.32, z: -1.16}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.6, y: -0.32, z: -1.16}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1072620573}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1377876802
 MonoBehaviour:
@@ -14429,9 +14430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a02e5427c20b2845810b394629902f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxPositionX: 5
-  MaxPositionY: 5
   joystick: {fileID: 275139927}
+  AimDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &1391131320
 GameObject:
   m_ObjectHideFlags: 0
@@ -16079,7 +16079,7 @@ Transform:
   - {fileID: 242811596}
   - {fileID: 1674816205}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1582090254
 GameObject:
@@ -16833,7 +16833,7 @@ Transform:
   - {fileID: 291500633}
   - {fileID: 831712232}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639839402
 GameObject:
@@ -19835,7 +19835,7 @@ Transform:
   - {fileID: 1966769258}
   - {fileID: 2014212647}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1954350958
 GameObject:

@@ -43,7 +43,8 @@ public class Player : MonoBehaviour
       Vector3  WalkingDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
        
         UpdateMovement(WalkingDirection);
-        UpdateRotation(WalkingDirection);
+        UpdateRotation2();
+     //   UpdateRotation(WalkingDirection);
     }
     //var WalkingDirection = Vector3.zero;
 
@@ -85,12 +86,19 @@ public class Player : MonoBehaviour
     }
     void UpdateRotation(Vector3 WalkingDirection)
     {
-        // var targetRotation = WalkingDirection;
+         //var targetRotation = WalkingDirection;
 
         var delta = crosshair.transform.position - transform.position; // różnica odlłegości między graczem a celownikiem
 
         var targetRotation = (Vector2)delta; //player patrzy się w kierunku kursora
         transform.right = Vector3.Lerp(transform.right, targetRotation, Time.deltaTime * 9f); // nadajemy płynniejszy obrót
+    }
+
+    void UpdateRotation2()
+    {
+
+        //  transform.right = crosshair.AimDirection;
+        transform.right = Vector3.Lerp(transform.right, crosshair.AimDirection, Time.deltaTime * 5f);
     }
 }
 

@@ -6,15 +6,16 @@ public class CrosshariJoystick : MonoBehaviour
 {
 
 
-    [SerializeField]
-    float MaxPositionX = 5f;
+    //[SerializeField]
+    //float MaxPositionX = 10f;
 
-    [SerializeField]
-    float MaxPositionY = 5f;
+    //[SerializeField]
+    //float MaxPositionY = 10f;
 
     [SerializeField]
     Joystick joystick;
 
+    public Vector3 AimDirection;
 
 
     // Start is called before the first frame update
@@ -26,18 +27,19 @@ public class CrosshariJoystick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var AimDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
+         AimDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
 
-        transform.Translate(AimDirection * Time.deltaTime * 4f, Space.World);
+       // transform.Translate(AimDirection * Time.deltaTime * 4f, Space.World);
 
-        var positionX = Mathf.Clamp(transform.position.x, -MaxPositionX, MaxPositionX);
-        var positionY = Mathf.Clamp(transform.position.y, -MaxPositionY, MaxPositionY);
+       // var positionX = Mathf.Clamp(transform.position.x, -MaxPositionX, MaxPositionX);
+      //  var positionY = Mathf.Clamp(transform.position.y, -MaxPositionY, MaxPositionY);
 
-        transform.position = new Vector3(positionX, positionY);
+     //   transform.position = new Vector3(positionX, positionY);
 
         var targetRotation = AimDirection;
 
-        transform.right = Vector3.Lerp(transform.right, targetRotation, Time.deltaTime * 5f);
+       transform.right = Vector3.Lerp(transform.right, targetRotation, Time.deltaTime * 5f);
+  
 
     }
 }
