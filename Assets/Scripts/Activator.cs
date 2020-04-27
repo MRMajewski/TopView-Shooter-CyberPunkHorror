@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -9,6 +10,10 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Activator : MonoBehaviour
 {
+
+   // [SerializeField]
+  //  Button useButton;
+
     [SerializeField]
     bool AutoInteract = false;
 
@@ -48,18 +53,34 @@ public class Activator : MonoBehaviour
     {
         if (!Active) return;
 
-        if (AutoInteract || Input.GetKeyDown(KeyCode.Space))
-        //      Destroy(gameObject);
-            if (OnActivated != null) OnActivated.Invoke();
+        if (Input.GetKeyDown(KeyCode.Space) || AutoInteract)
+            if (OnActivated != null)
+                OnActivated.Invoke();
     }
+
+
+    //public void Use()
+    //{
+
+    //    if (AutoInteract || useButton.)      
+    //         Destroy(gameObject);
+    //       if (OnActivated != null) OnActivated.Invoke();
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!CheckIfPlayer(collision)) return;
         Active = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Active = false;
+        if (!CheckIfPlayer(collision)) return;
+            Active = false;
+    }
+
+    bool CheckIfPlayer(Collider2D collider)
+    {
+        return (collider.gameObject.GetComponent<Player>() != null);
     }
 }
