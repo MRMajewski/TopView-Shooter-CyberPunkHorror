@@ -51,21 +51,22 @@ public class Activator : MonoBehaviour
 
     void UpdateInteraction()
     {
-        if (!Active) return;
 
-        if (Input.GetKeyDown(KeyCode.Space) || AutoInteract)
-            if (OnActivated != null)
-                OnActivated.Invoke();
+    
+     //   Debug.Log("dupa");
+
+
+        //if (Input.GetKeyDown(KeyCode.Space) || AutoInteract)
+        //    if (OnActivated != null)
+        //        OnActivated.Invoke();
     }
 
 
-    //public void Use()
-    //{
-
-    //    if (AutoInteract || useButton.)      
-    //         Destroy(gameObject);
-    //       if (OnActivated != null) OnActivated.Invoke();
-    //}
+    public void Use()
+    {
+        if (!Active) return;
+        if (OnActivated != null) OnActivated.Invoke();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -51,7 +51,6 @@ public class MainCamera : MonoBehaviour
     {
         var speed = Player.velocity.magnitude;
 
-        Debug.Log(speed);
 
         var targetViewSize = 4.5f + (speed / 2f);
 
