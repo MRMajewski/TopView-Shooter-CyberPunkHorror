@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     float WalkingSpeed = 3f;
 
+    public Animator animator;
+
 
     [SerializeField]
     Joystick joystick;
@@ -41,7 +43,13 @@ public class Player : MonoBehaviour
       //  Vector3 WalkingDirection = Vector3.zero;
 
       Vector3  WalkingDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
-       
+
+        if((WalkingDirection != Vector3.zero))
+            animator.SetBool("IsMoving", true);
+        else animator.SetBool("IsMoving", false);
+
+
+
         UpdateMovement(WalkingDirection);
         UpdateRotation2();
      //   UpdateRotation(WalkingDirection);
@@ -78,12 +86,16 @@ public class Player : MonoBehaviour
             //  transform.position = new Vector3(positionX, positionY);
             WalkingDirection *= WalkingSpeed;
             rigidbody.velocity = Vector3.Lerp(rigidbody.velocity, WalkingDirection, Time.deltaTime * 1f);
-          
+
+          //  animator.SetBool("IsMoving", true);
+
             //     var targetRotation = rigidbody.velocity;
 
             //   transform.right = Vector3.Lerp(transform.right, WalkingDirection, Time.deltaTime * 5f);
         }
+      //  else animator.SetBool("IsMoving", false);
     }
+
     void UpdateRotation(Vector3 WalkingDirection)
     {
          //var targetRotation = WalkingDirection;
