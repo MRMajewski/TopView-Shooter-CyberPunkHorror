@@ -38,8 +38,8 @@ public class MainCamera : MonoBehaviour
 
         var targetPosition =
               (Vector3)Player.position
-              + (Vector3)Player.velocity * 2f
-              + Vector3.back * 9f;
+              + (Vector3)Player.velocity * 3f
+              + Vector3.back * 4f;
 
         transform.position = Vector3.Lerp(
                 transform.position,
@@ -51,8 +51,8 @@ public class MainCamera : MonoBehaviour
     {
         var speed = Player.velocity.magnitude;
 
-
-        var targetViewSize = 4.5f + (speed / 2f);
+        // obszar jaki obejmuje kamera
+        var targetViewSize = .05f + (speed / 4f);
 
         MyCamera.orthographicSize = Mathf.Lerp(
             MyCamera.orthographicSize,

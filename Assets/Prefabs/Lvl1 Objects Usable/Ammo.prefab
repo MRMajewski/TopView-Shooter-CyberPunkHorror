@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2811369594051494650}
   - component: {fileID: 2811369594051494649}
   - component: {fileID: 2811369594051494648}
-  - component: {fileID: 2811369594051494647}
   - component: {fileID: 2811369594051494651}
+  - component: {fileID: 5044543506538419173}
   m_Layer: 0
   m_Name: Ammo
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2811369594051494646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.911024, y: -0.88212585, z: 2.197854}
+  m_LocalPosition: {x: 5.911024, y: -0.88212585, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,19 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &2811369594051494647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2811369594051494646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8addb0d8b87e3204aaa29b99e161f737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AutoInteract: 0
 --- !u!114 &2811369594051494651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +123,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amount: 10
+--- !u!114 &5044543506538419173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2811369594051494646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27add68f8b42b0c43b102ae4bdf7083f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AutoInteract: 0

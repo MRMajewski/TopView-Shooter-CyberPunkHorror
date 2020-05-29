@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 6120855865173692757}
   - component: {fileID: 6120855865173692758}
   - component: {fileID: 6120855865173692759}
-  - component: {fileID: 6120855865173692752}
   - component: {fileID: -8690120556151700719}
+  - component: {fileID: 1127681951430888073}
   - component: {fileID: -4316808635899137405}
-  - component: {fileID: 1670144235}
   - component: {fileID: 8896473877263692100}
   m_Layer: 0
   m_Name: Level_1_pudo
@@ -143,19 +142,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.55, y: 2.28}
   m_EdgeRadius: 0
---- !u!114 &6120855865173692752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6120855865173692755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8addb0d8b87e3204aaa29b99e161f737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AutoInteract: 0
 --- !u!50 &-8690120556151700719
 Rigidbody2D:
   serializedVersion: 4
@@ -177,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4316808635899137405
+--- !u!114 &1127681951430888073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,11 +172,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6120855865173692755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37cf8ad60c2c63b44803edd3f31ff32a, type: 3}
+  m_Script: {fileID: 11500000, guid: 27add68f8b42b0c43b102ae4bdf7083f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialHealth: 2
---- !u!114 &1670144235
+  AutoInteract: 0
+--- !u!114 &-4316808635899137405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

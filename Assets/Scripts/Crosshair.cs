@@ -23,7 +23,7 @@ public class Crosshair : MonoBehaviour
             targetPosition.x = Mathf.Clamp(targetPosition.x, -MovementArea.x, MovementArea.x);
             targetPosition.y = Mathf.Clamp(targetPosition.y, -MovementArea.y, MovementArea.y);
 
-            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 5f);
+            transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * 8f);
         }
    
 }

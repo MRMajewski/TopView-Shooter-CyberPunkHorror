@@ -14,7 +14,7 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        FindObjectOfType<Player>().GetComponent<Entity>().OnHealthChanged += health =>
+        FindObjectOfType<PlayerPC>().GetComponent<Entity>().OnHealthChanged += health =>
          {
              HealthCounter.text = health.ToString("N0"); //"NO" powoduje, że liczba zmiennoprzecinkowa jeset pokazywana jako int
          };

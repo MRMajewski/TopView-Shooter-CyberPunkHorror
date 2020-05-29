@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Activator))]
+[RequireComponent(typeof(ActivatorPC))]
 
 public class Bullets : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class Bullets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var activator = GetComponent<Activator>();
+        var activator = GetComponent<ActivatorPC>();
         activator.OnActivated += () =>
         {
             var player = FindObjectOfType<PlayerShooting>();

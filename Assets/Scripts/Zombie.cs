@@ -10,7 +10,7 @@ public class Zombie : MonoBehaviour
 
     Vector2 TargetPosition;
 
-    Player TargetPlayer;
+    PlayerPC TargetPlayer;
 
     [SerializeField]
     float WalkingSpeed=1f;
@@ -24,7 +24,7 @@ public class Zombie : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-     //   TargetPosition;
+        
     }
 
     void Start()
@@ -86,23 +86,19 @@ public class Zombie : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var player = collision.gameObject.GetComponent<Player>();
-
-        if (player != null) 
-        TargetPlayer = player;
+        if (CheckIfPlayer(collision))
+            TargetPlayer = collision.gameObject.GetComponent<PlayerPC>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        var player = collision.gameObject.GetComponent<Player>();
-
-        if (player != null)
-            TargetPlayer = null;
+        if(CheckIfPlayer(collision))
+        TargetPlayer = null;
     }
 
     bool CheckIfPlayer(Collider2D collision)
     {
-        var player = collision.gameObject.GetComponent<Player>();
+        var player = collision.gameObject.GetComponent<PlayerPC>();
         if (player == null)
             return false;
         else return true;

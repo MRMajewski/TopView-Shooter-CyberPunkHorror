@@ -14,6 +14,11 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField]
     Vector2 ShootingPoint;
 
+    [SerializeField]
+    FieldOfView FieldOfView;
+
+    bool isAimDownSights;
+
     private int bullets;
     public int Bullets
     {
@@ -36,13 +41,32 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         Bullets = 5;
+
+         isAimDownSights = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-     //   if (Input.GetMouseButtonDown(0))
-     //       ShootBullet();
+        if (Input.GetMouseButtonDown(0))
+            ShootBullet();
+
+        if(Input.GetMouseButtonDown(1))
+        {
+            isAimDownSights = !isAimDownSights;
+            if(isAimDownSights)
+            {
+                FieldOfView.SetFoV(35f);
+                FieldOfView.SetViewDistance(9f);
+            }
+            else
+            {
+                //normal
+                FieldOfView.SetFoV(90f);
+                FieldOfView.SetViewDistance(6f);
+            }
+        }
+
         
     }
 

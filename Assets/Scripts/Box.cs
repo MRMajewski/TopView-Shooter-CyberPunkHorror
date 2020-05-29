@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Activator))]
+[RequireComponent(typeof(ActivatorPC))]
 [RequireComponent(typeof(GenerateLoot))]
 
 
@@ -13,7 +13,7 @@ public class Box : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Activator>().OnActivated += () =>
+        GetComponent<ActivatorPC>().OnActivated += () =>
         {
             GetComponent<GenerateLoot>().Generate();
             Destroy(gameObject);

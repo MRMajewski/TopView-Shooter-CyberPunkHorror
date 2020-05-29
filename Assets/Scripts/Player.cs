@@ -7,6 +7,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
+    FieldOfView FieldOfView;
+
+    [SerializeField]
     float WalkingSpeed = 3f;
 
     public Animator animator;
@@ -52,6 +55,10 @@ public class Player : MonoBehaviour
 
         UpdateMovement(WalkingDirection);
         UpdateRotation2();
+        FieldOfView.SetAimDirection(transform.right);
+        FieldOfView.SetOrigin(transform.position);
+
+
      //   UpdateRotation(WalkingDirection);
     }
     //var WalkingDirection = Vector3.zero;
