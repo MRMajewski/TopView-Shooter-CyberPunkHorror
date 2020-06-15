@@ -58,6 +58,6 @@ public class PlayerPC : MonoBehaviour
         var delta = Crosshair.transform.position - transform.position; // różnica odlłegości między graczem a celownikiem
         var targetRotation = (Vector2)delta; //player patrzy się w kierunku kursora
 
-        transform.right = Vector3.Lerp(transform.right, targetRotation, Time.deltaTime * 2f); // nadajemy płynniejszy obrót
+        transform.right = Vector3.Lerp(transform.right, targetRotation, Time.deltaTime * 4f); // nadajemy płynniejszy obrót
     }
 }

@@ -51,23 +51,23 @@ public class PlayerShooting : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             ShootBullet();
 
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
             isAimDownSights = !isAimDownSights;
-            if(isAimDownSights)
+            if (isAimDownSights)
             {
                 FieldOfView.SetFoV(35f);
-                FieldOfView.SetViewDistance(9f);
+                FieldOfView.SetViewDistance(5f);
             }
             else
             {
                 //normal
-                FieldOfView.SetFoV(90f);
-                FieldOfView.SetViewDistance(6f);
+                FieldOfView.SetFoV(80f);
+                FieldOfView.SetViewDistance(1.4f);
             }
         }
 
-        
+
     }
 
     public void ShootBullet()

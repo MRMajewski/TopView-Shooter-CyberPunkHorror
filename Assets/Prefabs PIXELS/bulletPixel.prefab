@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2567183958690652928, guid: a3ff36849d380b845b615c87fc4457bd,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3409745736876206305, guid: a3ff36849d380b845b615c87fc4457bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -75,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 5482711767994988736, guid: a3ff36849d380b845b615c87fc4457bd,
         type: 3}
       propertyPath: m_Name
-      value: bullet
+      value: bulletPixel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ff36849d380b845b615c87fc4457bd, type: 3}
