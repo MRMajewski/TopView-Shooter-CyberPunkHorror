@@ -19,7 +19,7 @@ public class Zombie : MonoBehaviour
     float AttackingDistance = 2f;
 
     [SerializeField]
-    float AttackingDamage = 1f;
+    public float AttackingDamage = 1f;
 
     // Start is called before the first frame update
     private void Awake()
@@ -54,7 +54,7 @@ public class Zombie : MonoBehaviour
         UpdateAttack();
     }
 
-    void UpdateMovement()
+    public void UpdateMovement()
     {
         var targetSpeed = WalkingSpeed;
 
@@ -82,6 +82,9 @@ public class Zombie : MonoBehaviour
 
         TargetPlayer.GetComponent<Entity>().Health -= AttackingDamage * Time.deltaTime;
 
+        StartCoroutine(UpdateColor(TargetPlayer));
+    
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -102,5 +105,23 @@ public class Zombie : MonoBehaviour
         if (player == null)
             return false;
         else return true;
+    }
+
+
+    IEnumerator UpdateColor(PlayerPC TargetPlayer)
+    {
+
+
+        // TargetPlayer.GetComponent<SpriteRenderer>().material.color = Color.red;
+
+         TargetPlayer.GetComponent<SpriteRenderer>().material.color = Color.Lerp(Color.red, Color.white, Time.deltaTime*5f);
+
+        //Color targetColor = Color.red;
+
+        //targetColor *= (Mathf.Sin(Time.timeSinceLevelLoad * 10f) ) / 10f;
+
+        //TargetPlayer.GetComponent<Renderer>().material.color = targetColor;
+        yield return new WaitForSeconds(2f);
+        TargetPlayer.GetComponent<SpriteRenderer>().material.color = Color.white;
     }
 }

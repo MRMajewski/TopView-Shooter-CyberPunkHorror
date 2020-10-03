@@ -140,6 +140,14 @@
     <Compile Include="Assets\Scripts\RandomLootBox.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\Misc\SimpleMovement.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\Misc\SineMove.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\StateMachine.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\States\BaseState.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\States\MoveState.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\States\NewState.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\States\WaitState.cs" />
+    <Compile Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\Assets\Scripts\ZombieStateMachine.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -200,6 +208,7 @@
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend Scroll.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\State Machine Learning\gaello-statemachine-design-pattern-673639cc36aa\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Particle AddSoft A8.shader" />

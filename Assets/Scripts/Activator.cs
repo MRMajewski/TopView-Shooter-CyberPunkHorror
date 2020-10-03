@@ -43,8 +43,8 @@ public class Activator : MonoBehaviour
        Color targetColor = Color.white;
 
         if (Active)
-            targetColor *= (Mathf.Sin(Time.timeSinceLevelLoad *5f ) + 9f) / 10f;
-
+            //   targetColor *= (Mathf.Sin(Time.timeSinceLevelLoad *5f ) + 9f) / 10f;
+            targetColor *= (Mathf.Sin(Time.timeSinceLevelLoad * 8f) +10f ) / 10f;
 
         GetComponent<Renderer>().material.color = targetColor;
     }

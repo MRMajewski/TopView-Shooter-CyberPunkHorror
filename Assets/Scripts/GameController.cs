@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +27,11 @@ public class GameController : MonoBehaviour
 
         MainMenu.SetActive(true);
 
+
+
         Time.timeScale = 0f;
 
-        BlackMask.SetActive(true);
+      //  BlackMask.SetActive(true);
 
         MoveToLayer(BehindMask.transform, 11);
         // BehindMask.layer = 0;

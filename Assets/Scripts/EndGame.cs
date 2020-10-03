@@ -45,7 +45,7 @@ public class EndGame : MonoBehaviour
      void EndGameProcedureWin()
     {
 
-        Time.timeScale = 3f;
+        Time.timeScale = 0.5f;
         EndGameUIWin.SetActive(true);
     }
 }

@@ -53,12 +53,19 @@ public class MainCameraPC : MonoBehaviour
         var speed = Player.velocity.magnitude;
 
 
-        var targetViewSize = .6f + (speed / 2f);
+        var targetViewSize = .6f + (speed / 2.5f);
 
         MyCamera.orthographicSize = Mathf.Lerp(
             MyCamera.orthographicSize,
             targetViewSize,
-            Time.deltaTime);
+            Time.deltaTime*1.3f);
+
+        //var targetViewSize = .6f + (speed / 2f);
+
+        //MyCamera.orthographicSize = Mathf.Lerp(
+        //    MyCamera.orthographicSize,
+        //    targetViewSize,
+        //    Time.deltaTime);
     }
 
 }

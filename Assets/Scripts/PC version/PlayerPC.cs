@@ -12,6 +12,9 @@ public class PlayerPC : MonoBehaviour
     FieldOfView FieldOfView;
 
     [SerializeField]
+    GameObject bleedingEffect;
+
+    [SerializeField]
     float WalkingSpeed = 2f;
 
     [SerializeField]
@@ -19,6 +22,7 @@ public class PlayerPC : MonoBehaviour
 
     Rigidbody2D Rigidbody;
     CrosshairPC Crosshair;
+
 
     private void Awake() // tu inicjalizujemy Rigidbody
     {
@@ -30,6 +34,7 @@ public class PlayerPC : MonoBehaviour
     void Start()
     {
         GetComponent<Entity>().OnKilled += () => Application.Quit();
+     //   GetComponent<Entity>().OnHealthChanged += () => 
     }
 
     void Update()
@@ -59,5 +64,10 @@ public class PlayerPC : MonoBehaviour
         var targetRotation = (Vector2)delta; //player patrzy się w kierunku kursora
 
         transform.right = Vector3.Lerp(transform.right, targetRotation, Time.deltaTime * 4f); // nadajemy płynniejszy obrót
+    }
+
+    void TakingDamage()
+    {
+        Instantiate(bleedingEffect, transform.position,Quaternion.identity);
     }
 }
